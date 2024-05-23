@@ -16,6 +16,7 @@ jobs:
     - name: Analysing the code with pylint
       run: |
             echo "Running pylint..."
+            ls
             pylint main.py
             pylint transform.py
             pylint test.py
