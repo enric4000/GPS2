@@ -17,7 +17,7 @@ jobs:
       run: |
             echo "Running pylint..."
             pip install pylint
-            pylint **/*.py
+            pylint /*.py
     - name: Analysing the code with coverage
       run: |
           echo "Generating coverage report..."
