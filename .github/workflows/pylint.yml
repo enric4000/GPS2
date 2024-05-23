@@ -15,6 +15,7 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
+            pwd
             echo "Running pylint..."
             pylint ../../main.py
             pylint transform.py
