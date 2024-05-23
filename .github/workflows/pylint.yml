@@ -16,7 +16,6 @@ jobs:
     - name: Analysing the code with pylint
       run: |
             echo "Running pylint..."
-            pip install pylint
             pylint *.py
     - name: Analysing the code with coverage
       run: |
