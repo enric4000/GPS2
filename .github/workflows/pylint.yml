@@ -17,9 +17,7 @@ jobs:
       run: |
             pwd
             echo "Running pylint..."
-            pylint ../../main.py
-            pylint transform.py
-            pylint test.py
+            pylint ../main.py
     - name: Analysing the code with coverage
       run: |
           echo "Generating coverage report..."
