@@ -16,9 +16,10 @@ jobs:
     - name: Analysing the code with pylint
       run: |
             pwd
+            ls -la
             cd ..
             pwd
-            ls
+            ls -la -R
             echo "Running pylint..."
             pylint ../main.py
     - name: Analysing the code with coverage
