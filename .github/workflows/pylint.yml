@@ -16,7 +16,9 @@ jobs:
     - name: Analysing the code with pylint
       run: |
             echo "Running pylint..."
-            pylint *.py
+            pylint main.py
+            pylint transform.py
+            pylint test.py
     - name: Analysing the code with coverage
       run: |
           echo "Generating coverage report..."
