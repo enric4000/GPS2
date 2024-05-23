@@ -1,0 +1,31 @@
+image: python:3
+
+stages:
+  - lint
+  - test
+
+
+lint:
+  stage: lint
+  script:
+    - echo "Running pylint..."
+    - pip install pylint
+    - pylint **/*.py
+
+test:
+  stage: test
+  script:
+    - echo "Running tests with coverage..."
+    - pip install pytest pytest-cov
+    - pytest --cov=.
+
+coverage:
+  stage: test
+  script:
+    - echo "Generating coverage report..."
+    - coverage run -m pytest
+    - coverage report -m
+    - coverage xml
+  artifacts:
+    reports:
+      cobertura: coverage.xml
